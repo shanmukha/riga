@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => "site_pages", :action => "home"
-  map.resources :orders, :new => {:express_checkout => :get}, :member =>{:confirmation => :get}
+  map.resources :orders, :new => {:express_checkout => :get}, :member =>{:confirmation => :get, :purchase => :get}
   map.with_options :controller => 'site_pages' do |s|
     s.why_riga 'why_riga', :action => 'why_riga'
     s.what_is_in_stag_guide 'what_is_in_stag_guide', :action =>'what_is_in_stag_guide'
