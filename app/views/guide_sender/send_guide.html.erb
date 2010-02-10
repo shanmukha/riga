@@ -1,0 +1,8 @@
+<p> Dear <%= @order.buyer.name %>,</p>
+<p> Thank you for ordering Riga Stag night guide </p>
+<p>Please find the link to the guide for Riga Stag night.</p>
+ 
+<p><%= link_to "Download Riga Stag night guide",  guide_guides_url(:t => @order.buyer.guide_token) %></p>
+Best regards, <br />
+---------------------<br />
+

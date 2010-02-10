@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Stag night in Riga") %></title>
+    <%= stylesheet_link_tag 'styles' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div class="header_links">
+      <%if current_user%>
+        <%= link_to "Logout", logout_path %> 
+      <%else%>
+         <%= link_to "Login", login_path %>
+      <%end%>	
+    </div>
+    <div id="container_wide">
+       <div id="logo"><br /><img src="/images/logo.jpg" alt="Stag night in Riga"  width="195"  height="130" border="0" /></div>
+       <h1>stagnightinriga.com <span>- Administration</span></h1> 
+       <div id="admin_section">
+         <%- flash.each do |name, msg| -%>
+      	    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+         <%- end -%>
+         <h1><%=h yield(:title) %></h1>
+         <%= yield %>
+        </div>
+    </div>
+
+
+    <div id="footer">
+
+      <p><%= link_to 'Home', root_url, :title => 'Home'%> | <%= link_to 'Why Riga', why_riga_url, :title => 'Why Riga' %> | <%= link_to "What&apos;s in the Stag guide?", what_is_in_stag_guide_url, :title => 'Whats in the Stag guide' %> | <br/><span>Copyright &copy; stagnightinriga.com</span>. Designed by <a href="http://www.isiritech.com.com" target="_blank">Isiri Technologies</a></p>
+
+    </div>
+ 
+  </body>
+</html>

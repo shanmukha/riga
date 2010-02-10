@@ -1,0 +1,230 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin : 0;
+padding : 0;
+border : 0;
+outline : 0;
+vertical-align : baseline;
+font-size:100%;
+font-style:normal;
+font-weight:normal;
+vertical-align:baseline;
+}
+ 
+:focus {
+outline : 0;
+}
+ 
+ol, ul {
+list-style : none;
+}
+ 
+table {
+border-collapse : separate;
+border-spacing : 0;
+}
+ 
+caption, th, td {
+text-align : left;
+font-weight : normal;
+}
+ 
+blockquote:before, blockquote:after, q:before, q:after {
+content : "";
+}
+ 
+blockquote, q {
+quotes : "" "";
+}
+
+
+/*******************************************************/
+body { margin: 0px; padding: 0px; background:#fff url(../images/b_body.gif) 0 0 repeat-x; color: #6d6c67; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: normal; }
+
+/* CSS Document */
+ 
+ pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+h1 {font-size: 36px; color: #ffe05b; font-weight: bold;}
+h1 span {font-size: 25px; color: #fff; font-weight: bold;}
+
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#flash_notice {background: #64a049; color: #fff; font-weight: bold; border: 1px solid #4e9131; padding: 5px;  width: 99%; margin: 0 auto 10px auto;}
+#flash_error {background: #c95343; color: #fff; font-weight: bold; border: 1px solid #a9462b; padding: 5px;  width: 99%; margin: 0 auto 10px auto;}
+#flash_notice a{color: #eac600; margin: 0px 20px 0px 30px;}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+ul{list-style-type:none;}
+
+.left {float: left;}
+.right{float: right;}
+.clear {clear: both; margin: 0px; height:0}
+
+.header_links{ float:right; margin: 20px 40px 0px 0px; height:15px; color: #fff;}
+.header_links a{ color: #fff; font-weight: bold;}
+
+#container{width:678px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px;}
+#container_wide{width:97%; margin: 0 auto;   padding: 15px; min-height:500px; height:auto !important; height:500px;}
+
+
+/* TOP */
+
+#topPan{width:678px; position:relative; clear:both; height:80px}
+
+#topPan ul.menu{position:absolute; top:30px; left:20px; width:650px}
+#topPan ul.menu li{float:left; height:45px; margin-right:35px}
+#topPan ul.menu li a{display:block; font-weight: bold; color: #fff; font-size: 16px;}
+#topPan ul.menu li a.active{color: #fdc758; }
+#topPan ul.menu li a:hover{height:45px; }
+
+
+/* CONTENT */
+
+#content{width:678px; position:relative; clear:both; background: #fff url(../images/b_header.jpg) 0 0 no-repeat}
+
+#logo{position:absolute; top:50px; left:20px}
+#incontent{width:632px; position:relative; padding:255px 0 0 0; margin:0 auto;  }
+#incontent p{margin: 20px 0px 20px 0px; font-size: 14px;}
+#incontent h1{margin: 0px 0px 0px 0px; font-size: 25px; line-height: normal; color: #d50000; font-style: italic;}
+#incontent h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
+#incontent ol li{margin: 10px 0px 10px 0px;}
+
+#admin_section{ width:100%; position:relative; padding:170px 0 0 0; margin:0 auto;  }
+#admin_section p{margin: 20px 0px 20px 0px; font-size: 14px;}
+#admin_section h1{margin: 0px 0px 10px 0px; font-size: 25px; line-height: normal; color: #d50000; font-style: italic;}
+#admin_section h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
+#admin_section ol li{margin: 10px 0px 10px 0px;}
+/*---------------------------------Table styles ---------------------*/
+
+.listing { 
+	border-collapse: collapse;
+        width: 99.5%;
+        color: #000;
+	margin: 0px 5px 0px 4px;
+      	float:left;
+        border: 1px solid #b1b1b1;
+      
+}
+
+.listing th {
+	  background: #ddd url(/images/table_header.jpg) repeat-x;
+          color: #0c3866;
+          text-align: left;
+          padding: 0.5em .5em .6em .5em;
+          font-weight: bold; 
+ 	  font-size:13px;
+	  letter-spacing:1px;
+          border: 1px solid #b1b1b1;
+}
+ 
+.listing td { 
+        padding: 0.5em .5em .5em .5em;
+	color: #000; 
+	font-size:13px;
+        vertical-align: center;
+	
+}
+
+
+
+ 
+.listing  th a { 
+	color: #a6316d;
+        font-weight: bold;
+}
+
+.listing a:hover { 
+	color: #000;
+	text-decoration: underline;
+}
+ 
+.listing .header {
+	background: #F2F3F7;
+} 
+
+
+.listing tr.odd {
+      background-color:#fff;
+
+      
+}
+
+.listing tr.even td {
+      border-top: #b1b1b1 1px solid;
+      border-bottom: #b1b1b1 1px solid;
+}
+
+.listing tr.odd td {
+      border-top: #b1b1b1 1px solid;
+      border-bottom: #b1b1b1 1px solid;
+}
+
+.listing tr.small td { 
+        padding: 0.5em .5em .3em .5em;
+	
+}
+
+.listing tr:hover {
+      background-color:#fffbbd;
+      
+}
+
+.listing tr.even{
+      background-color:#eaf2ff;
+               
+}
+
+.listing tr.even:hover{
+      background-color:#fffbbd;
+               
+}
+/* FOOTER */
+
+#footer{height:72px; clear:both; margin:0 auto; width:100%; margin-top:20px; background:url(../images/b_footer.gif) 0 0 repeat-x;}
+#footer p{padding: 20px 0 0 0; font:11px/16px Trebuchet MS, sans-serif; font-weight:normal; text-align:center; color:#848484;}
+#footer p span{font:11px/16px Trebuchet MS, sans-serif; }
+#footer p a{font:11px/16px Trebuchet MS, sans-serif; font-weight:normal; color:#848484; text-decoration:none; padding: 0 5px }
+#footer p a:hover{text-decoration:none; background:#848484; color:#fff}
+#sponsor{
+	width:756px;
+	margin:0 auto;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+}

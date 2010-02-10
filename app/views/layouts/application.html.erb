@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Stag night in Riga") %></title>
+    <%= stylesheet_link_tag 'styles' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+     <h1>stagnightinriga.com</h1>
+      <div id="topPan">
+        <ul class="menu">
+	    <li><%= link_to 'Home', root_url, :title => 'Home', :class => request.request_uri == "/" ? 'active': 'link' %></li>
+	    <li><%= link_to 'Why Riga?', why_riga_url, :title => 'Why Riga?', :class => request.request_uri =~ /why_riga/? 'active': 'link' %></li>
+            <li><%= link_to "What&apos;s in the Stag guide?", what_is_in_stag_guide_url, :title => 'Whats in the Stag guide?', :class => request.request_uri =~ /what_is_in_stag_guide/? 'active': 'link' %></li>
+        </ul>
+      </div>
+
+     <div id="content">
+
+        <div id="logo"><a href="#"><img src="/images/logo.jpg" alt="Stag night in Riga"  width="195"  height="130" border="0" /></a></div>
+
+
+        <div id="incontent">
+           <%- flash.each do |name, msg| -%>
+      	      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+           <%- end -%>
+           <h1><%=h yield(:title) %></h1>
+           <%= yield %>
+        </div>
+
+       <div class="clear"></div>
+     </div>
+</div>
+
+
+<div id="footer">
+
+<p><%= link_to 'Home', root_url, :title => 'Home'%> | <%= link_to 'Why Riga', why_riga_url, :title => 'Why Riga' %> | <%= link_to "What&apos;s in the Stag guide?", what_is_in_stag_guide_url, :title => 'Whats in the Stag guide' %> | <br/><span>Copyright &copy; stagnightinriga.com</span>. Designed by <a href="http://www.isiritech.com.com" target="_blank">Isiri Technologies</a></p>
+
+</div>
+ 
+  </body>
+</html>

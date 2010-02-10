@@ -1,0 +1,26 @@
+<% form_for(@order) do |f| %>
+  <h2>Please provide us following information to complete your order.</h2>
+
+  <%= f.error_messages %>
+ 
+  <% f.fields_for :buyer do |buyer| %>
+    <P> Amount: 10$ </p>
+    <p>
+      <%= buyer.label :name %>
+      <%= buyer.text_field :name %>
+    </p> 
+
+    <p>
+      <%= buyer.label :email %>
+      <%= buyer.text_field :email %>
+   </p> 
+   <%= buyer.hidden_field :ip_address, :value => request.remote_ip %>
+  <% end %> 
+  <%= f.hidden_field :payment_type, :value => 'paypal' %>
+  <%= f.hidden_field :amount, :value => '10' %>
+  <p>
+    <%= image_submit_tag 'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif' %>
+  </p>
+<% end %>
+
+
