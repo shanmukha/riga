@@ -1,7 +1,7 @@
 <% form_tag(guide_resent_guides_url) do |f| %>
   <h2>Please enter your email address. We will mail you the guide link again.</h2>
   <p>
-    email: <%= text_field_tag :email, class => 'textbox' %>
+    email: <%= text_field_tag :email, :class => 'textbox' %>
   </p>
   <p>
     <%= submit_tag 'Submit' %>
