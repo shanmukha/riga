@@ -3,6 +3,7 @@ class Admin::OrdersController < ApplicationController
   before_filter :require_user
 
   def index
-    @orders = Order.all(:order => 'created_at desc', :include => 'buyer')
+    @search = Order.ascend_by_created_at.search(params[:search])
+    @orders = @search.all(:include => [:buyer, :transaction])
   end
 end

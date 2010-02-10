@@ -1,8 +1,25 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'redmond/jquery-ui-1.7.2.custom' %>
+  <%=javascript_include_tag 'jquery-1.3.2.min','jquery-ui-1.7.2.custom.min' %>
+  <script type="text/javascript">
+       	jQuery(function() {
+			  jQuery("#search_created_at").datepicker() 
+			  });
+	</script>
+<% end %>
+
 <h1>Listing orders</h1>
+<hr />
+<% form_for @search do |f| -%>
+    email: <%= f.text_field :buyer_email_like, :class => 'textbox'-%>
+    date: <%= f.text_field :created_at, :class => 'textbox-small' -%>
+    <%= f.submit 'Search orders'-%>
+  <% end %>
+
 <% unless @orders.blank? %>
   <table class ='listing'>
     <tr>
-      <th>Name</th> <th>Email</th> <th> Ip address </th><th>Date ordered </th> <th>Payment reference</th> <th>Amount</th>
+      <th>Name</th> <th>Email</th> <th> Ip address </th><th>Date ordered </th> <th>Payment reference</th><th>Status</th> <th>Amount</th>
     </tr>
 
     <% @orders.each do |order| %>
@@ -12,10 +29,11 @@
         <td><%=order.buyer.ip_address %></td>
         <td><%=order.created_at.strftime('%d/%m/%Y') %></td>
         <td><%=order.express_payer_id %></td>
+        <td><%=(order.transaction.success ? 'Success' : 'Failed') unless order.transaction.blank? %></td>
         <td><%=order.amount %></td>
       </tr>
     <% end %>
   </table>
 <% else %>
-  No orders yet.
+  <br />No orders yet.
 <% end %>

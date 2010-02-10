@@ -7,12 +7,12 @@
     <P> Amount: 10$ </p>
     <p>
       <%= buyer.label :name %>
-      <%= buyer.text_field :name %>
+      <%= buyer.text_field :name, class => 'textbox' %>
     </p> 
 
     <p>
       <%= buyer.label :email %>
-      <%= buyer.text_field :email %>
+      <%= buyer.text_field :email, class => 'textbox' %>
    </p> 
    <%= buyer.hidden_field :ip_address, :value => request.remote_ip %>
   <% end %> 

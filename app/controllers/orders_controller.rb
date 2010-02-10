@@ -25,13 +25,23 @@ class OrdersController < ApplicationController
 
   def express_checkout
     order = Order.find(params[:id])
-    response = EXPRESS_GATEWAY.setup_purchase(1000, :ip => request.remote_ip, :return_url => confirmation_order_url(order), :cancel_return_url => new_order_url)
+    response = EXPRESS_GATEWAY.setup_purchase(1000, :ip => request.remote_ip, :return_url => purchase_order_url(order), :cancel_return_url => new_order_url)
     redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
   end 
 
-  def confirmation
+  def purchase
     order = Order.find(params[:id])
     order.update_attributes(:express_token => params[:token], :express_payer_id => params[:PayerID])
+    if order.purchase
+      redirect_to confirmation_order_url(order)
+    else
+      flash[:error] = "We couldn't complete your order. Please re-order again. Check your mail once, before re-ordering."
+      redirect_to new_order_url
+    end
+  end
+
+  def confirmation
+    order = Order.find(params[:id])
     order.buyer.update_attribute('guide_token', order.buyer.make_token)
     GuideSender.deliver_send_guide(order)
   end
