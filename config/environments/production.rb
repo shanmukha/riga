@@ -33,6 +33,7 @@ config.after_initialize do
   paypal_options = {:login => "riga_1265692938_biz_api1.gmail.com",
                      :password => "1265692945",
                      :signature => "AK1f4SkLyroiUKA10xpHPP5eqoKQAi0AlmaxiDG3-aIH4iDS6cZLt6Nl"
+
                     }
 
   ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
