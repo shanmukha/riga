@@ -15,7 +15,7 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
-config.action_mailer.default_url_options = { :host => "localhost:3000"}
+config.action_mailer.default_url_options = { :host => "97.107.140.86:3002"}
 
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
