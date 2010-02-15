@@ -14,9 +14,7 @@ vertical-align:baseline;
 outline : 0;
 }
  
-ol, ul {
-list-style : none;
-}
+
  
 table {
 border-collapse : separate;
@@ -36,7 +34,7 @@ blockquote, q {
 quotes : "" "";
 }
 
-
+a {text-decoration: none; color: #0051a4; }
 /*******************************************************/
 body { margin: 0px; padding: 0px; background:#fff url(../images/b_body.gif) 0 0 repeat-x; color: #6d6c67; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: normal; }
 
@@ -98,6 +96,8 @@ ul{list-style-type:none;}
 #container_wide{width:97%; margin: 0 auto;   padding: 15px; min-height:500px; height:auto !important; height:500px;}
 
 /********************************related to fields***************************************/
+ol{margin-left: 30px;}
+ol li{font-size: 14px;}
 
 input.textbox{
 	border:#7D99B2 1px solid;

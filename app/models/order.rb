@@ -5,9 +5,9 @@ class Order < ActiveRecord::Base
   accepts_nested_attributes_for :buyer, :reject_if => proc {|attributes| attributes[:name].blank? or attributes[:email].blank? }
 
   def purchase
-    response = EXPRESS_GATEWAY.purchase(10, :ip => buyer.ip_address, :token => self.express_token, :payer_id => self.express_payer_id)
-    #transactions.create!(:action => "purchase", :amount => 10, :response => response)
-    OrderTransaction.create!(:action => "purchase",:order_id => self.id, :amount => 10, :response => response)
+    response = EXPRESS_GATEWAY.purchase(1000, :ip => buyer.ip_address, :token => self.express_token, :payer_id => self.express_payer_id)
+    self.build_transaction
+    transaction.create!(:action => "purchase", :amount => 1000, :response => response)
     response.success?
   end
 
