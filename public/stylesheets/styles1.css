@@ -34,23 +34,18 @@ blockquote, q {
 quotes : "" "";
 }
 
-a {text-decoration: underline; color: #0051a4; }
+a {text-decoration: none; color: #0051a4; }
 /*******************************************************/
-body { margin: 0px; padding: 0px; background:#fff url(/images/b_body.gif) 0 0 repeat-x; color: #6d6c67; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: normal; }
+body { margin: 0px; padding: 0px; background:#fff url(../images/b_body.gif) 0 0 repeat-x; color: #6d6c67; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: normal; }
 
 
 h1 {font-size: 36px; color: #ffe05b; font-weight: bold;}
-h1 img{margin-left:0px;}
 h1 span {font-size: 25px; color: #fff; font-weight: bold;}
-
-p a{color:#ed9d04;text-decoration:underline;}
-
-p a:hover{text-decoration:none;}
 
 
 .fieldWithErrors {
   padding: 2px;
-  background-color:red;
+  background-color: red;
   display: table;
 }
 
@@ -97,7 +92,7 @@ ul{list-style-type:none;}
 .header_links{ float:right; margin: 20px 40px 0px 0px; height:15px; color: #fff;}
 .header_links a{ color: #fff; font-weight: bold;}
 
-#container{width:800px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px;}
+#container{width:678px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px;}
 #container_wide{width:97%; margin: 0 auto;   padding: 15px; min-height:500px; height:auto !important; height:500px;}
 
 /********************************related to fields***************************************/
@@ -131,9 +126,9 @@ input.textbox-small:focus, textarea:focus{
 
 /* TOP */
 
-#topPan{width:678px; position:relative; clear:both; height:60px}
+#topPan{width:678px; position:relative; clear:both; height:80px}
 
-#topPan ul.menu{position:absolute; top:00px; left:20px; width:650px}
+#topPan ul.menu{position:absolute; top:30px; left:20px; width:650px}
 #topPan ul.menu li{float:left; height:45px; margin-right:35px}
 #topPan ul.menu li a{display:block; font-weight: bold; color: #fff; font-size: 16px;}
 #topPan ul.menu li a.active{color: #fdc758; }
@@ -142,12 +137,11 @@ input.textbox-small:focus, textarea:focus{
 
 /* CONTENT */
 
-#content{width:800px; position:relative; clear:both; background: #fff url(/images/b_header.jpg) 0 0 no-repeat}
+#content{width:678px; position:relative; clear:both; background: #fff url(../images/b_header.jpg) 0 0 no-repeat}
 
-#logo_left{float:left;margin:25px 0px 0px 20px;}
-#logo_right{float:right;margin:7px 5px 0px 0px;}
-#incontent{width:760px; position:relative; padding:40px 0 0 0; margin:0 auto;  }
-#incontent p{margin: 20px 0px 20px 0px; font-size: 14px;color:#534f4f;text-align:justify;}
+#logo{position:absolute; top:50px; left:20px}
+#incontent{width:632px; position:relative; padding:255px 0 0 0; margin:0 auto;  }
+#incontent p{margin: 20px 0px 20px 0px; font-size: 14px;}
 #incontent h1{margin: 0px 0px 0px 0px; font-size: 25px; line-height: normal; color: #d50000; font-style: italic;}
 #incontent h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
 #incontent ol li{margin: 10px 0px 10px 0px;}

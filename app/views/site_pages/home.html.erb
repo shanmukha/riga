@@ -1,3 +1,7 @@
+<% content_for :image do %>
+   <%= image_tag('home.jpg', :border=> "0", :height=>"223",  :width=>"525") %>
+<% end %>
+
 <h1>Design your own stag weekend in Riga and save £££££££££!!!</h1>
 <p><%= link_to 'Riga', why_riga_url %> is the no 1 stag destination for Brits.  No surprise why – it’s buzzing with nightlife, gorgeous girls and some fantastic activities you can do out there – some of them unique to Riga.</p>  
 
@@ -14,3 +18,5 @@
 <p>Plus you’ve got the fun of putting together your own stag weekend and choosing the combination of activities that suits you!</p> 
 
 <center> <%= link_to image_tag('order.gif'), new_order_url %></center>
+
+
