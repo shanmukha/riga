@@ -7,12 +7,13 @@
 			  });
 	</script>
 <% end %>
-
+<br /><br />
 <h1>Listing orders</h1>
 <hr />
 <% form_for @search do |f| -%>
+    Name: <%= f.text_field :buyer_name_like, :class => 'textbox'-%>
     email: <%= f.text_field :buyer_email_like, :class => 'textbox'-%>
-    date: <%= f.text_field :created_at, :class => 'textbox-small' -%>
+    date: <%= f.text_field :created_at_like, :class => 'textbox-small',:id => 'search_created_at' -%>
     <%= f.submit 'Search orders'-%>
   <% end %>
 
@@ -33,7 +34,9 @@
         <td><%=order.amount %></td>
       </tr>
     <% end %>
+   
   </table>
+   <div id="pg"><%=will_paginate @orders%></div>
 <% else %>
   <br />No orders yet.
 <% end %>

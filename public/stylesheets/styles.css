@@ -251,3 +251,60 @@ input.textbox-small:focus, textarea:focus{
 	text-align: center;
 	padding: 10px 0px 15px 0px;
 }
+#pg{
+	padding: 30px 0px 10px 0px;
+	clear:both;
+	margin:0px 0px 0px 20px;
+	
+}
+ 
+/* Pagination Link */
+
+#pg a {
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+	border: 1px solid #376da4;
+	padding: 3px;
+	-moz-border-radius: 3px;
+}
+ 
+#pg a:hover {
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+	border: 1px solid #000000;
+	background-color: white;
+	padding: 3px;
+	-moz-border-radius: 3px;
+}
+ 
+/* Pagination Current Page */
+ 
+#pg a.current {
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	border: 1px solid #0D62C3;
+	background-color: #0D62C3;
+	padding: 3px;
+	-moz-border-radius: 3px;
+}
+ 
+/* Pagination Disabled Page */
+
+#pg span.disabled {
+	font-size: 11px;
+	text-decoration: none;
+	color: #C6C7C7;
+	border: 1px solid #C6C7C7;
+	background-color: white;
+	padding: 3px;
+	-moz-border-radius: 3px; // Rounds the corners; Works for Mozilla only
+}
+
+#heading-right
+ {float:left;
+ margin: 30px 0px 0px 30px;
+ }
