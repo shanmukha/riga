@@ -152,7 +152,7 @@ input.textbox-small:focus, textarea:focus{
 #incontent h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
 #incontent ol li{margin: 10px 0px 10px 0px;}
 
-#admin_section{ width:100%; position:relative; padding:170px 0 0 0; margin:0 auto;  }
+#admin_section{ width:100%; position:relative; padding:40px 0 0 0; margin: 0 auto;  }
 #admin_section p{margin: 20px 0px 20px 0px; font-size: 14px;}
 #admin_section h1{margin: 0px 0px 10px 0px; font-size: 25px; line-height: normal; color: #d50000; font-style: italic;}
 #admin_section h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
