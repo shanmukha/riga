@@ -15,8 +15,12 @@
       <%end%>	
     </div>
     <div id="container_wide">
-       <div id="logo"><br /><img src="/images/logo.jpg" alt="Stag night in Riga"  width="195"  height="130" border="0" /></div>
-       <h1>stagnightinriga.com <span>- Administration</span></h1> 
+   
+       <div id="logo_left"><img src="/images/logo.jpg" alt="Stag night in Riga"  width="195"  height="110" border="0" /></div>
+        
+         <div id="heading-right"><h1>stagnightinriga.com<span>- Administration</span></h1></div>
+         <div style="clear:both"></div>
+      <!-- <h1>stagnightinriga.com <span>- Administration</span></h1> -->
        <div id="admin_section">
          <%- flash.each do |name, msg| -%>
       	    <%= content_tag :div, msg, :id => "flash_#{name}" %>
