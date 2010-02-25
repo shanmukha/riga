@@ -24,11 +24,12 @@
       </div>
 
      <div id="content">
-        <div id="logo_left"><a href="#"><img src="/images/logo.jpg" alt="Stag night in Riga" border="0" height="180" width="235"></a> </div>
-	<div id="logo_right"><%= yield(:image) %></div>
+       <div id = "content_top">
+         <div id="logo_left"><a href="#"><img src="/images/logo.jpg" alt="Stag night in Riga" border="0" height="180" width="235"></a> </div>
+	 <div id="logo_right"><%= yield(:image) %></div>
 
-       <div style="clear:both"></div>
-
+         <div style="clear:both"></div>
+      </div>
 
         <div id="incontent">
            <%- flash.each do |name, msg| -%>

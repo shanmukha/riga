@@ -36,7 +36,7 @@ quotes : "" "";
 
 a {text-decoration: underline; color: #0051a4; }
 /*******************************************************/
-body { margin: 0px; padding: 0px; background:#fff url(/images/b_body.gif) 0 0 repeat-x; color: #6d6c67; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: normal; }
+body { margin: 0px; padding: 0px; background:#ededed url(/images/b_body.gif) 0 0 repeat-x; color: #6f6e6c; font-family: Helvetica, Arial, Sans-Serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 13px; line-height: 25px; }
 
 
 h1 {font-size: 36px; color: #ffe05b; font-weight: bold;}
@@ -91,13 +91,16 @@ p a:hover{text-decoration:none;}
 ul{list-style-type:none;}
 
 .left {float: left;}
-.right{float: right;}
+.right{float: right; }
+.image{width: 320px;}
+#activities{width: 420px;}
+
 .clear {clear: both; margin: 0px; height:0}
 
 .header_links{ float:right; margin: 20px 40px 0px 0px; height:15px; color: #fff;}
 .header_links a{ color: #fff; font-weight: bold;}
 
-#container{width:800px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px;}
+#container{width:800px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px; }
 #container_wide{width:97%; margin: 0 auto;   padding: 15px; min-height:500px; height:auto !important; height:500px;}
 
 /********************************related to fields***************************************/
@@ -133,7 +136,7 @@ input.textbox-small:focus, textarea:focus{
 
 #topPan{width:678px; position:relative; clear:both; height:60px}
 
-#topPan ul.menu{position:absolute; top:00px; left:20px; width:650px}
+#topPan ul.menu{position:absolute; top:20px; left:20px; width:650px}
 #topPan ul.menu li{float:left; height:45px; margin-right:35px}
 #topPan ul.menu li a{display:block; font-weight: bold; color: #fff; font-size: 16px;}
 #topPan ul.menu li a.active{color: #fdc758; }
@@ -142,15 +145,16 @@ input.textbox-small:focus, textarea:focus{
 
 /* CONTENT */
 
-#content{width:800px; position:relative; clear:both; background: #fff url(/images/b_header.jpg) 0 0 no-repeat}
-
+#content{width:800px; position:relative; clear:both;background: #fff url(/images/b_header.jpg) 0 0 no-repeat;;/* url(/images/content_bg.jpg);*/ }
+ 
 #logo_left{float:left;margin:25px 0px 0px 20px;}
 #logo_right{float:right;margin:7px 5px 0px 0px;}
-#incontent{width:760px; position:relative; padding:40px 0 0 0; margin:0 auto;  }
+#incontent{width:740px; position:relative; padding:30px 0 0 0; margin:0 auto;  }
 #incontent p{margin: 20px 0px 20px 0px; font-size: 14px;color:#534f4f;text-align:justify;}
-#incontent h1{margin: 0px 0px 0px 0px; font-size: 25px; line-height: normal; color: #d50000; font-style: italic;}
+#incontent h1{margin: 0px 0px 0px 0px; font-size: 32px; line-height: normal; color: #e8726c; font-style: italic;}
+#incontent hr{background: #dbac46; border-top: 1px solid #dcd8cf; border-bottom: 1px solid #fff3da;}
 #incontent h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
-#incontent ol li{margin: 10px 0px 10px 0px;}
+#incontent ol li{margin: 10px 0px 10px 0px; color: #504f49;}
 
 #admin_section{ width:100%; position:relative; padding:40px 0 0 0; margin: 0 auto;  }
 #admin_section p{margin: 20px 0px 20px 0px; font-size: 14px;}
