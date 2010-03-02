@@ -36,8 +36,7 @@
     <% end %>
    
   </table>
-   <%= @orders.class %>
-  
+   <div id="pg"><%=will_paginate @orders %></div>
 <% else %>
   <br />No orders yet.
 <% end %>
