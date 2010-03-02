@@ -4,7 +4,9 @@ class Admin::OrdersController < ApplicationController
 
   def index
     @search = Order.ascend_by_created_at.search(params[:search])
-    @search.created_at_like = params[:search][:created_at_like].to_date if !params[:search].nil?
+    unless params[:search].blank?
+      @search.created_at_like = params[:search][:created_at_like].to_date unless params[:search][:created_at_like].blank?
+    end
     @orders = @search.all(:include => [:buyer, :transaction]).paginate(:page => params[:page], :per_page =>50)
   end
 end

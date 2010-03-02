@@ -9,7 +9,7 @@
   <body>
     <div class="header_links">
       <%if current_user%>
-        <%= link_to "Logout", logout_path %> | <%= link_to "Visit public site", root_path %>
+        <%= link_to "Logout", logout_path %> | <%= link_to "Goto public site", root_path %> | <%= link_to "Settings", admin_settings_path %> 
       <%else%>
          <%= link_to "Login", login_path %>
       <%end%>	
@@ -18,7 +18,7 @@
    
        <div id="logo_left"><img src="/images/logo.jpg" alt="Stag night in Riga"  width="195"  height="110" border="0" /></div>
         
-         <div id="heading-right"><h1>stagnightinriga.com<span>- Administration</span></h1></div>
+         <div id="heading-right"><h1>Stag night in Riga <br /><span> Administration</span></h1></div>
          <div style="clear:both"></div>
       <!-- <h1>stagnightinriga.com <span>- Administration</span></h1> -->
        <div id="admin_section">

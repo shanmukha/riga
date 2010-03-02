@@ -31,7 +31,7 @@
         <td><%=order.created_at.strftime('%d/%m/%Y') %></td>
         <td><%=order.express_payer_id %></td>
         <td><%=(order.transaction.success ? 'Success' : 'Failed') unless order.transaction.blank? %></td>
-        <td><%=order.amount %></td>
+        <td><%=order.amount %>$</td>
       </tr>
     <% end %>
    

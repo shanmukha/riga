@@ -14,7 +14,6 @@ vertical-align:baseline;
 outline : 0;
 }
  
-
  
 table {
 border-collapse : separate;
@@ -98,7 +97,7 @@ ul{list-style-type:none;}
 .clear {clear: both; margin: 0px; height:0}
 
 .header_links{ float:right; margin: 20px 40px 0px 0px; height:15px; color: #fff;}
-.header_links a{ color: #fff; font-weight: bold;}
+.header_links a{ color: #fff; font-weight: bold; font-size: 12px; margin: 0px 5px 0px 5px;}
 
 #container{width:800px; margin: 0 auto; position:relative; padding: 10px; min-height:500px; height:auto !important; height:500px; }
 #container_wide{width:97%; margin: 0 auto;   padding: 15px; min-height:500px; height:auto !important; height:500px;}
@@ -149,9 +148,9 @@ input.textbox-small:focus, textarea:focus{
  
 #logo_left{float:left;margin:25px 0px 0px 20px;}
 #logo_right{float:right;margin:7px 5px 0px 0px;}
-#incontent{width:740px; position:relative; padding:30px 0 0 0; margin:0 auto;  }
+#incontent{width:740px; position:relative; padding:25px 0 0 0; margin:0 auto;  }
 #incontent p{margin: 20px 0px 20px 0px; font-size: 14px;color:#534f4f;text-align:justify;}
-#incontent h1{margin: 0px 0px 0px 0px; font-size: 32px; line-height: normal; color: #e8726c; font-style: italic;}
+#incontent h1{margin: 0px 0px 0px 0px; font-size: 36px; line-height: normal; color: #c68c00; font-style: italic;}
 #incontent hr{background: #dbac46; border-top: 1px solid #dcd8cf; border-bottom: 1px solid #fff3da;}
 #incontent h2{margin: 0px 0px 0px 0px; font-size: 20px; line-height: normal; color: #db9704;}
 #incontent ol li{margin: 10px 0px 10px 0px; color: #504f49;}
@@ -169,8 +168,7 @@ input.textbox-small:focus, textarea:focus{
         color: #000;
 	margin: 5px 5px 0px 4px;
       	float:left;
-        border: 1px solid #b1b1b1;
-      
+        border: 1px solid #b1b1b1;    
 }
 
 .listing th {
@@ -188,13 +186,10 @@ input.textbox-small:focus, textarea:focus{
         padding: 0.5em .5em .5em .5em;
 	color: #000; 
 	font-size:13px;
-        vertical-align: center;
-	
+        vertical-align: center;	
 }
 
 
-
- 
 .listing  th a { 
 	color: #a6316d;
         font-weight: bold;
@@ -211,9 +206,7 @@ input.textbox-small:focus, textarea:focus{
 
 
 .listing tr.odd {
-      background-color:#fff;
-
-      
+      background-color:#fff;  
 }
 
 .listing tr.even td {
@@ -229,18 +222,15 @@ input.textbox-small:focus, textarea:focus{
 
 
 .listing tr:hover {
-      background-color:#fffbbd;
-      
+      background-color:#fffbbd; 
 }
 
 .listing tr.even{
-      background-color:#eaf2ff;
-               
+      background-color:#eaf2ff;          
 }
 
 .listing tr.even:hover{
-      background-color:#fffbbd;
-               
+      background-color:#fffbbd;         
 }
 /* FOOTER */
 

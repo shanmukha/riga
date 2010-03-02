@@ -1,0 +1,18 @@
+<h1>Listing settings</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @settings.each do |setting| %>
+  <tr>
+    <td><%= link_to 'Show', setting %></td>
+    <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+    <td><%= link_to 'Destroy', setting, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New setting', new_setting_path %>
