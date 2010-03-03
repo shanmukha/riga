@@ -1,11 +1,16 @@
-<h1>New setting</h1>
+<br />
+<h2>New setting</h2>
 
-<% form_for(@setting) do |f| %>
+<% form_for([:admin,@setting], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
+  <p> File name :    <%= f.file_field :setting_pdf %></p>
+
+   <p> Price :
+      <%= f.text_field :price , :class => 'textbox' %>
+    </p>
   <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', settings_path %>

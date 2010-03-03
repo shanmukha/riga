@@ -1,4 +1,5 @@
 class Admin::SettingsController < ApplicationController
+  layout 'administrator'
 
   def index
     @admin_settings = Admin::Setting.all
@@ -11,18 +12,15 @@ class Admin::SettingsController < ApplicationController
 
 
   def show
-    @setting = Admin::Setting.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @setting }
-    end
+    @setting = Setting.find(params[:id])
+    send_file @setting.setting_pdf.path, :type => @setting.setting_pdf_content_type, :disposition => 'attachment', :x_sendfile => true
   end
+
 
   # GET /admin_settings/new
   # GET /admin_settings/new.xml
   def new
-    @setting = Admin::Setting.new
+    @setting = Setting.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -32,18 +30,18 @@ class Admin::SettingsController < ApplicationController
 
   # GET /admin_settings/1/edit
   def edit
-    @setting = Admin::Setting.find(params[:id])
+    @setting = Setting.find(params[:id])
   end
 
   # POST /admin_settings
   # POST /admin_settings.xml
   def create
-    @setting = Admin::Setting.new(params[:setting])
+    @setting = Setting.new(params[:setting])
 
     respond_to do |format|
       if @setting.save
         flash[:notice] = 'Admin::Setting was successfully created.'
-        format.html { redirect_to(@setting) }
+        format.html { redirect_to(admin_orders_path ) }
         format.xml  { render :xml => @setting, :status => :created, :location => @setting }
       else
         format.html { render :action => "new" }
@@ -55,12 +53,12 @@ class Admin::SettingsController < ApplicationController
   # PUT /admin_settings/1
   # PUT /admin_settings/1.xml
   def update
-    @setting = Admin::Setting.find(params[:id])
+    @setting = Setting.find(params[:id])
 
     respond_to do |format|
       if @setting.update_attributes(params[:setting])
         flash[:notice] = 'Admin::Setting was successfully updated.'
-        format.html { redirect_to(@setting) }
+        format.html { redirect_to(admin_orders_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -72,7 +70,7 @@ class Admin::SettingsController < ApplicationController
   # DELETE /admin_settings/1
   # DELETE /admin_settings/1.xml
   def destroy
-    @setting = Admin::Setting.find(params[:id])
+    @setting = Setting.find(params[:id])
     @setting.destroy
 
     respond_to do |format|
@@ -81,3 +79,4 @@ class Admin::SettingsController < ApplicationController
     end
   end
 end
+

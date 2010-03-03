@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace(:admin) do |admin|
     admin.resources :orders, :controller => 'orders'
+    admin.resources :settings
   end
 
   map.resources :guides, :collection => {:guide => :get, :resend_guide => :get, :guide_resent => :post}
@@ -18,3 +19,4 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
+
