@@ -3,7 +3,7 @@ class Admin::OrdersController < ApplicationController
   before_filter :require_user
 
   def index
-    @search = Order.ascend_by_created_at.search(params[:search])
+    @search = Order.descend_by_created_at.search(params[:search])
     unless params[:search].blank?
       @search.created_at_like = params[:search][:created_at_like].to_date unless params[:search][:created_at_like].blank?
     end

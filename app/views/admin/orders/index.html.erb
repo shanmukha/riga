@@ -20,15 +20,15 @@
 <% unless @orders.blank? %>
   <table class ='listing'>
     <tr>
-      <th>Name</th> <th>Email</th> <th> Ip address </th><th>Date ordered </th> <th>Payment reference</th><th>Status</th> <th>Amount</th>
+      <th>Date ordered </th><th>Name</th> <th>Email</th> <th> Ip address </th> <th>Payment reference</th><th>Status</th> <th>Amount</th>
     </tr>
 
     <% @orders.each do |order| %>
       <tr class="<%=cycle("odd", "even")%>">
+        <td><%=order.created_at.strftime('%d/%m/%Y') %></td>
         <td><%=order.buyer.name %></td> 
         <td><%=order.buyer.email %></td>
         <td><%=order.buyer.ip_address %></td>
-        <td><%=order.created_at.strftime('%d/%m/%Y') %></td>
         <td><%=order.express_payer_id %></td>
         <td><%=(order.transaction.success ? 'Success' : 'Failed') unless order.transaction.blank? %></td>
         <td><%=order.amount %>$</td>

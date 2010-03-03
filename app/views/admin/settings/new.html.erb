@@ -1,12 +1,12 @@
 <br />
-<h2>New setting</h2>
-
+<h2>Guide settings</h2>
+<hr />
 <% form_for([:admin,@setting], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
-  <p> File name :    <%= f.file_field :setting_pdf %></p>
+  <p> Upload guide :    <%= f.file_field :setting_pdf %></p>
 
-   <p> Price :
+   <p> Enter price :
       <%= f.text_field :price , :class => 'textbox' %>
     </p>
   <p>
