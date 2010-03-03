@@ -91,8 +91,9 @@ ul{list-style-type:none;}
 
 .left {float: left;}
 .right{float: right; }
-.image{width: 320px;}
-#activities{width: 420px;}
+.image{width: 385px;}
+
+#activities{width: 330px;}
 
 .clear {clear: both; margin: 0px; height:0}
 
