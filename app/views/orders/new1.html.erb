@@ -16,10 +16,12 @@
    </p> 
    <%= buyer.hidden_field :ip_address, :value => request.remote_ip %>
   <% end %> 
-<% end %>
+  <%= f.hidden_field :payment_type, :value => 'paypal' %>
+  <%= f.hidden_field :amount, :value => '10' %>
+  <p>
 
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-     <input type="hidden" name="cmd" value="_s-xclick">
-     <input type="hidden" name="hosted_button_id" value="7WFL7WVZAW9RE">
-     <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-  </form>
+   <!-- This button image is part of paypal's hosted(saved) button. We are doing post to paypal url in orders/create action instead of pasting actual button's code here in form. --> 
+
+    <input type="image" src="https://www.paypal.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+  </p>
+<% end %>
