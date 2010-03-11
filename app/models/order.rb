@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
+  require 'digest/sha1'
   has_one :buyer
   has_one :transaction, :class_name => "OrderTransaction"
 
@@ -15,4 +16,13 @@ class Order < ActiveRecord::Base
     (cart.total_price*100).round
   end
 
+  def secure_digest(*args)
+    Digest::SHA1.hexdigest(args.flatten.join('--'))
+  end
+
+  def make_token
+    secure_digest(Time.now, (1..10).map{ rand.to_s })
+  end
+
 end
+

@@ -2,20 +2,20 @@
   <h2>Please provide us following information to complete your order.</h2>
 
   <%= f.error_messages %>
- 
+
   <% f.fields_for :buyer do |buyer| %>
     <P> Amount: &pound;9.95 </p>
     <p>
       <%= buyer.label :name %>
       <%= buyer.text_field :name, :class => 'textbox' %>
-    </p> 
+    </p>
 
     <p>
       <%= buyer.label :email %>
       <%= buyer.text_field :email, :class => 'textbox' %>
-   </p> 
+   </p>
    <%= buyer.hidden_field :ip_address, :value => request.remote_ip %>
-  <% end %> 
+  <% end %>
 <% end %>
 
 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -23,3 +23,4 @@
      <input type="hidden" name="hosted_button_id" value="7WFL7WVZAW9RE">
      <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
   </form>
+
