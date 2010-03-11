@@ -3,6 +3,7 @@
 
  <% f.fields_for :buyer do |buyer| %>
     <P> Amount: &pound;9.95 </p>
+    <p> Please verify and confirm your personal details. </p> 
     <p>
       <%= buyer.label :name %>
       <%= buyer.text_field :name, :class => 'textbox' %>
