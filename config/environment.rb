@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "activemerchant", :lib => "active_merchant", :source => 'http://github.com', :version => '1.5.0'
   config.gem "authlogic"
-  config.gem "mechanize", :lib => 'mechanize', :version => '1.0.0'
+  #config.gem "mechanize", :lib => 'mechanize', :version => '1.0.0'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
