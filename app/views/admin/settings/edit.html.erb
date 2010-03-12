@@ -1,23 +1,20 @@
 <br />
-<h2>Editing setting</h2>
+<h2>Update guide</h2>
 
 
-<%= javascript_include_tag "jquery-1.3.2.min"%>
+
 
 <% form_for([:admin, @setting], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
 
-   <p> Previously Uploaded File :   <%= @setting.setting_pdf_file_name %> &nbsp;&nbsp; <%= link_to "download", admin_setting_path(@setting)%> </p>
+   <p> Previously uploaded guide :   <%= @setting.setting_pdf_file_name %> &nbsp;&nbsp; <%= link_to "download", admin_setting_path(@setting)%> </p>
 
-  <%= link_to_function "Upload new file" ,"jQuery('#show_file_field').show();return false;"%>
-    <div id="show_file_field" style="display:none;return false;">
-        <p> File name :
+
+
+        <p> choose updated guide :
          <%= f.file_field :setting_pdf  %></p>
-    </div>
-   <p> Price :
-      <%= f.text_field :price , :class => 'textbox' %>
-    </p>
+
 
   <p>
     <%= f.submit 'Update' %>

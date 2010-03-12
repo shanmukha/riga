@@ -2,7 +2,7 @@ class GuidesController < ApplicationController
   def guide
     buyer = Buyer.find_by_guide_token(params[:t])
     unless buyer.blank?
-      send_file STAG_GUIDE_PATH
+      send_file Setting.find(:first).setting_pdf.path
       buyer.update_attribute(:guide_token, '')
     else
       flash[:notice] = "It seems you have already downloaded the guide once."
@@ -26,3 +26,4 @@ class GuidesController < ApplicationController
     end
   end
 end
+

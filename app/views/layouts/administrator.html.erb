@@ -9,7 +9,7 @@
   <body>
     <div class="header_links">
       <%if current_user%>
-        <%= link_to "Logout", logout_path %> | <%= link_to "Goto public site", root_path %> | <% if find_setting.blank? %> <%= link_to "Settings", new_admin_setting_path %>  <%else%> <%= link_to "Settings", edit_admin_setting_path(@setting) %> <%end%> | <%= link_to 'Orders', admin_orders_url %>
+        <%= link_to "Goto public site", root_path %> | <% if find_setting.blank? %> <%= link_to "Upload guide", new_admin_setting_path %>  <%else%> <%= link_to "Upload guide", edit_admin_setting_path(@setting) %> <%end%> | <%= link_to 'Orders', admin_orders_url %> | <%= link_to "Logout", logout_path %>
       <%else%>
          <%= link_to "Login", login_path %>
       <%end%>
