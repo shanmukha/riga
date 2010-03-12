@@ -12,9 +12,12 @@ class OrdersController < ApplicationController
       @buyer.email = result['email']
       flash.now[:notice] = "Thank you. Your paypal transaction id is #{params['tx']}. Please confirm that, your personal details provided below are correct."
       @order.download_token = @order.make_token
+      @order.status = 'success'
       @order.save
       redirect_to edit_order_path(@order.id)
     else
+      @order.status = 'failure'
+      @order.save
       flash[:error] = "Your transaction id is #{params['tx']}. There was an error, while getting the transaction status. Please contact administrator at email riga_admin@gmail.com and provide your transaction id."
       redirect_to root_url
     end

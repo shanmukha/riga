@@ -3,7 +3,7 @@
 
  <% f.fields_for :buyer do |buyer| %>
     <P> Amount: &pound;9.95 </p>
-    <p> Please verify and confirm your personal details, fetched from paypal. </p> 
+    <p> Please verify and confirm your personal details, fetched from paypal. </p>
     <p>
       <%= buyer.label :name %>
       <%= buyer.text_field :name, :class => 'textbox' %>
@@ -15,6 +15,6 @@
    </p>
    <%= buyer.hidden_field :ip_address, :value => request.remote_ip %>
   <% end %>
-  <%= f.submit "update" %>
+  <%= f.submit "Confirm" %>
 <% end %>
 
