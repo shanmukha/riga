@@ -3,7 +3,7 @@
   <%=javascript_include_tag 'jquery-1.3.2.min','jquery-ui-1.7.2.custom.min' %>
   <script type="text/javascript">
        	jQuery(function() {
-			  jQuery("#search_created_at").datepicker() 
+			  jQuery("#search_created_at").datepicker()
 			  });
 	</script>
 <% end %>
@@ -26,15 +26,17 @@
     <% @orders.each do |order| %>
       <tr class="<%=cycle("odd", "even")%>">
         <td><%=order.created_at.strftime('%d/%m/%Y') %></td>
-        <td><%=order.buyer.name %></td> 
+        <td><%=order.buyer.name %></td>
         <td><%=order.buyer.email %></td>
         <td><%=order.buyer.ip_address %></td>
         <td><%=order.transaction_id %></td>
+         <td><%=order.status %></td>
       </tr>
     <% end %>
-   
+
   </table>
    <div id="pg"><%=will_paginate @orders %></div>
 <% else %>
   <br />No orders yet.
 <% end %>
+
