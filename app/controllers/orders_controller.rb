@@ -91,7 +91,7 @@ class OrdersController < ApplicationController
  private
 
   def pdt_post(tx_value)
-    Mechanize.new.post("https://www.sandbox.paypal.com/cgi-bin/webscr", 'cmd' => '_notify-synch', 'tx'=> tx_value, 'at' => 'ujtZeP0hhIK9mUKgCC_oc5N0CICy8GpHD9tapxXcXebJbTbELKJWE1RgVLW')
+    Mechanize.new.post("https://www.sandbox.paypal.com/cgi-bin/webscr", 'cmd' => '_notify-synch', 'tx'=> tx_value, 'at' => 'dFlAcYfm4OsyQBaqPFZlHu_sIjz3eLysR2HlTXip3Fiewlh2bCtKMbJRo6e')
   end
 
   def split_response(str_resp)
