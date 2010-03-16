@@ -12,8 +12,7 @@ class Admin::SettingsController < ApplicationController
 
 
   def show
-    @setting = Setting.find(params[:id])
-    send_file @setting.setting_pdf.path, :type => @setting.setting_pdf_content_type, :disposition => 'attachment', :x_sendfile => true
+    send_file Setting.find(:first).setting_pdf.path
   end
 
 

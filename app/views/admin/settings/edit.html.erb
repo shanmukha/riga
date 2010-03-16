@@ -1,22 +1,12 @@
-<br />
-<h2>Update guide</h2>
-
-
-
-
-<% form_for([:admin, @setting], :html => { :multipart => true }) do |f| %>
-  <%= f.error_messages %>
-
-
+ <br />
+ <h2>Update guide</h2>
+  <% form_for([:admin, @setting], :html => { :multipart => true }) do |f| %>
+   <%= f.error_messages %>
    <p> Previously uploaded guide :   <%= @setting.setting_pdf_file_name %> &nbsp;&nbsp; <%= link_to "download", admin_setting_path(@setting)%> </p>
-
-
-
-        <p> choose updated guide :
-         <%= f.file_field :setting_pdf  %></p>
-
-
-  <p>
+      <p> choose updated guide :
+      <%= f.file_field :setting_pdf  %>
+   </p>
+   <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

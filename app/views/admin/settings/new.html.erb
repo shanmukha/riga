@@ -1,7 +1,7 @@
 <br />
 <h2>Guide settings</h2>
 <hr />
-<% form_for([:admin,@setting], :html => { :multipart => true }) do |f| %>
+    <% form_for([:admin,@setting], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
   <p> Upload guide :    <%= f.file_field :setting_pdf %></p>

@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
   require 'mechanize'
   def new
-    @order = Order.new({:payment_type =>"paypal",:transaction_id =>  params[:tx] ,:amount => 10})
+    @order = Order.new({:payment_type =>"paypal",:transaction_id =>  params[:tx] })
     @buyer = @order.build_buyer
+    @buyer.ip_address = request.remote_ip
     #We got the transaction id. Now checking the status of the transaction by posting it to PDT.
     resp = pdt_post(params[:tx])
     if resp.body =~ /SUCCESS/
